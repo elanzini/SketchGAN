@@ -1,7 +1,38 @@
 # SketchGAN
 
+[Check out the article on Medium](www.gooogle.com)
+
+## Environment
+Set up a new environment with the necessary dependencies:
+```
+# Create a new environment
+conda create -n py37 python=3.7
+
+# Activate the environment
+conda activate py37
+
+# Install dependencies from requirements.txt file
+pip install -r requirements.txt
+```
+
 ## Data
-The Quick, Draw! dataset is publicly available and [here](https://github.com/googlecreativelab/quickdraw-dataset#get-the-data) you can find the instructions on how to download the data locally. The `load_data` module is available in order to handle the `.ndjson` drawing files. The file containing sketches of circles (`circle.ndjson`) is already in the root folder of this project in order to provide a boilerplate setup.
+The Quick, Draw! dataset is publicly available and [here](https://github.com/googlecreativelab/quickdraw-dataset#get-the-data) you can find the instructions on how to download the data locally. The `load_data` module is available in order to handle the `.ndjson` drawing files.
+
+Here is a quick step-by-step guide to download the data locally:
+
+1. Download `gsutil` following the instructions [here](https://cloud.google.com/storage/docs/gsutil_install)
+
+2. Find the [dataset on Google Cloud Console](https://console.cloud.google.com/storage/browser/quickdraw_dataset) and navigate to `/full/simplified/`
+
+3. Browse all the different categories available and pick one
+
+4. Run `gsutil -m cp gs://quickdraw_dataset/full/simplified/[category].ndjson [path-to-store]`
+
+    For instance, the follwing command will download the `circle.ndjson` file in your current directory:
+
+    `gsutil -m cp gs://quickdraw_dataset/full/simplified/circle.ndjson .`
+
+Make sure the `.ndjson` file corresponding to the category is in your root folder.
 
 ## Model
 
