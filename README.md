@@ -1,6 +1,6 @@
 # SketchGAN
 
-[Check out the article on Medium](www.gooogle.com)
+[Check out the article on Medium](https://medium.com/@edoardolanzini/can-a-computer-draw-6a3c397a16d7)
 
 ## Environment
 Set up a new environment with the necessary dependencies:
